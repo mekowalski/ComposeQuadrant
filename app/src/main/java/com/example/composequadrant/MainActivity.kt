@@ -32,14 +32,24 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
+//@Composable
 //ComposeQuadrant()
-//four composables?
+@Composable
+
+//2 columns: each column has 2 rows
+//reach row: title, description, background color (and modifier for weight?)
 //entire quads(start, end, top, bottom): padding 15dp
 //center align content vertically/horizontally in each quad
 //text1: bold, bottom padding 15dp
 //text2: default font size
 
+@Composable
+//private function for each attribute of the quadrant:
+//title: string
+//description: string
+//background color: color
+//modifiers: Modifier (padding, font bold, text alignment)
+//alignments: center and horizontal center
 
 @Preview(showBackground = true)
 @Composable
