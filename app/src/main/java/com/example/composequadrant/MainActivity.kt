@@ -43,6 +43,13 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ComposeQuadrant() {
     Column(Modifier.fillMaxWidth()) {
+        Row(Modifier.weight(.5f)) {
+            Banner(
+                banner = stringResource(R.string.composable_categories),
+                backgroundColor = Color(0xFF96BBE3),
+                modifier = Modifier.weight(1f)
+            )
+        }
         Row(Modifier.weight(1f)) {
             ComposeQuadrantCards(
                 title = stringResource(R.string.text_composable),
@@ -97,6 +104,28 @@ private fun ComposeQuadrantCards(
         Text(
             text = description,
             textAlign = TextAlign.Justify
+        )
+    }
+}
+
+@Composable
+private fun Banner(
+    banner: String,
+    backgroundColor: Color,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(backgroundColor)
+            .padding(15.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment =  Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = banner,
+            modifier = Modifier.padding(top = 15.dp),
+            fontWeight = FontWeight.ExtraBold
         )
     }
 }

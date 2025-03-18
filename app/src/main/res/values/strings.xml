@@ -8,4 +8,5 @@
     <string name="row_description">A layout composable that places its children in a horizontal sequence.</string>
     <string name="column_composable">Column Composable</string>
     <string name="column_description">A layout composable that places its children in a vertical sequence.</string>
+    <string name="composable_categories">COMPOSABLE CATEGORIES</string>
 </resources>
